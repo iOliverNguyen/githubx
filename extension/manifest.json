@@ -9,7 +9,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://github.com/*/*/projects/*"],
+      "matches": ["https://github.com/etopvn/*", "https://github.com/orgs/etopvn/*"],
       "css": ["inject.css"],
       "js": ["inject.js"]
     }
