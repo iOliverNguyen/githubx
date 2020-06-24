@@ -15,7 +15,6 @@ function setupProjectCtrl() {
       let q = 'article';
       q += '[data-card-milestone*=' + JSON.stringify(JSON.stringify(ms.toLowerCase())) + ']';
       q += '[data-card-state*=' + JSON.stringify(JSON.stringify('open')) + ']';
-      console.log('q', q, $(q));
       return $(q);
     });
 

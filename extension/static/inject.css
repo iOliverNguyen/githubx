@@ -1,0 +1,176 @@
+
+@media (min-width: 544px) {
+    .card-filter-input {
+        max-width: 200px;
+    }
+}
+
+html {
+    margin-left: 232px !important;
+}
+
+.js-project-fullscreen-link span.hide-md {
+    display: none;
+}
+
+.js-show-project-triage span.hide-md {
+    display: none;
+}
+
+.js-show-project-menu span.hide-md {
+    display: none;
+}
+
+.x-ctrl {
+    max-width: 300px;
+    height: 42px;
+}
+
+.x-btn {
+    height: 36px;
+    margin: 4px 2px;
+    min-width: 54px;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 10px !important;
+    white-space: normal !important;
+    line-height: normal !important;
+}
+
+#x-sidebar {
+    width: 232px;
+    height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    background: #fafbfc;
+}
+
+.x-nav {
+    height: 53px;
+}
+
+.x-nav .x-title {
+    height: 30px;
+    background: #24292e;
+    color: #ddd;
+    text-align: left;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.x-nav .x-settings {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.x-nav .x-settings .x-icon-gear path {
+    fill: #777;
+}
+
+.x-nav .x-settings:hover .x-icon-gear path {
+    fill: #aaa;
+}
+
+.x-nav .x-list {
+    height: 23px;
+    line-height: 23px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #777;
+    background: #24292e;
+    font-size: 10px;
+    text-align: center;
+}
+
+.x-nav .x-list .x-item {
+    cursor: pointer;
+    flex: auto;
+    height: 100%;
+}
+
+.x-nav .x-list .x-item span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.x-nav .x-list .x-item:hover {
+    background: #eee;
+}
+
+.x-nav .x-list .x-item.x-active {
+    background: #fff;
+}
+
+.x-conv {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    border-right: solid 1px #ddd;
+}
+
+.x-conv-list .x-conv-item {
+    font-size: 11px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px 3px 6px;
+    border-bottom: solid 1px #ededed;
+    cursor: pointer;
+}
+
+.x-conv-list .x-conv-item:hover {
+    background: #f5f8fa;
+}
+
+.x-conv-list .x-conv-item:hover .x-time {
+    background: #f5f8fa;
+}
+
+.x-conv-list .x-title {
+    font-weight: bold;
+}
+
+.x-conv-list .x-title a {
+    text-decoration: none;
+    color: #24292e
+}
+
+.x-conv-list .x-conv-item:hover .x-title a {
+    color: #0366d6;
+}
+
+.x-conv-list .x-time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 4px 5px 8px;
+    background: #fff;
+    color: #666;
+}
+
+.x-conv-list .x-info {
+    width: 100%;
+    text-overflow: ellipsis;
+    color: #666666;
+}
+
+.x-conv-list .x-body {
+    width: 100%;
+    text-overflow: ellipsis;
+}
