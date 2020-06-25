@@ -11,7 +11,7 @@
           body: JSON.stringify({query: query})
         });
       },
-      request: async (path, body, type = 'json') => {
+      request: async (path, body) => {
         let resp = await fetch(baseURL + path, {
           method: 'POST',
           headers: {

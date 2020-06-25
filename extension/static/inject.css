@@ -50,13 +50,30 @@ html {
     background: #fafbfc;
 }
 
+@keyframes x-nav-loading {
+    from {
+        background-color: #24292e
+    }
+    to {
+        background-color: #4c5258
+    }
+}
+
 .x-nav {
     height: 53px;
+    position: relative;
+    background-color: #24292e;
+}
+
+.x-nav.x-loading {
+    animation-name: x-nav-loading;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .x-nav .x-title {
     height: 30px;
-    background: #24292e;
     color: #ddd;
     text-align: left;
     padding: 4px 10px;
@@ -88,7 +105,6 @@ html {
     justify-content: space-around;
     align-items: center;
     color: #777;
-    background: #24292e;
     font-size: 10px;
     text-align: center;
 }
@@ -126,7 +142,6 @@ html {
 .x-conv-list .x-conv-item {
     font-size: 11px;
     position: relative;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 6px 3px 6px;
@@ -143,10 +158,12 @@ html {
 }
 
 .x-conv-list .x-title {
-    font-weight: bold;
+    white-space: break-spaces;
+    text-indent: -3px;
 }
 
 .x-conv-list .x-title a {
+    font-weight: bold;
     text-decoration: none;
     color: #24292e
 }
@@ -156,11 +173,9 @@ html {
 }
 
 .x-conv-list .x-time {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px 4px 5px 8px;
-    background: #fff;
+    float: right;
+    padding: 0 0 0 4px;
+    background: #fafbfc;
     color: #666;
 }
 
@@ -173,4 +188,8 @@ html {
 .x-conv-list .x-body {
     width: 100%;
     text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

@@ -17,10 +17,16 @@ type AuthorizeResponse struct {
 type Issue struct {
 	model.Issue
 
-	// this field is the latest of LastComment.UpdatedAt and Issue.UpdatedAt
-	LastChangedAt time.Time `json:"lastChangedAt"`
+	Assignees []*model.User
+
+	Labels []*model.Label
+
+	Milestone *model.Milestone
 
 	Comments []*Comment `json:"comments"`
+
+	// this field is the latest of LastComment.UpdatedAt and Issue.UpdatedAt
+	LastChangedAt time.Time `json:"lastChangedAt"`
 }
 
 type Comment struct {

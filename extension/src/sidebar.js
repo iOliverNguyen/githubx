@@ -4,7 +4,7 @@ let clientID = generateID();
 
 function setupSidebar() {
   const appHTML = `
-<div class="x-nav">
+<div class="x-nav" v-bind:class="{'x-loading':isLoading}">
     <div class="x-title">Conversations</div>
     <a class="x-settings" v-on:click="settings"></a>
     <div class="x-list">
@@ -19,9 +19,9 @@ function setupSidebar() {
     <div class="x-conv-item" v-for="$is in issues" :key="$is.number" v-on:click="loadURL($event, $is.url)">
       <div class="x-header">
         <div class="x-title">
+          <div class="x-time">{{formatTime($is.lastChangedAt)}}</div>
           <a href="#" v-bind:href="$is.url">{{$is.title}}</a>
         </div>
-        <div class="x-time">{{formatTime($is.lastChangedAt)}}</div>
       </div>
       <div class="x-info">#{{$is.number}}</div>
       <div class="x-body">{{issueLatestText($is)}}</div>
@@ -40,6 +40,7 @@ function setupSidebar() {
     app = new Vue({
       el: '#x-sidebar',
       data: {
+        isLoading: false,
         issues: []
       },
       methods: {
@@ -89,9 +90,11 @@ function setupSidebar() {
     event.preventDefault();
 
     try {
+      this.isLoading = true;
       window.history.replaceState( {} , 'GitHub', url );
       let resp = await fetch(url);
       let html = await resp.text();
+      this.isLoading = false;
       let idx0 = html.indexOf('<main ');
       let idx1 = html.indexOf('</main>');
       if (idx0 < 0 || idx1 < 0 ) {

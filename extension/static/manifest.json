@@ -1,11 +1,9 @@
 {
   "name": "GitHubX",
   "description" : "GitHub Extension",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
   "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
   },
   "content_scripts": [
     {

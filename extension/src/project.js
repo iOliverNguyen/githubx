@@ -1,5 +1,4 @@
 function setupProjectCtrl() {
-
   function buildProjectCtrl($milestones) {
     let mapMilestones = {};
     for (let i = 0; i < $milestones.length; i++) {
